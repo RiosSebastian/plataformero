@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bokx7gjijwjg2"]
+
+[ext_resource type="PackedScene" uid="uid://byljeypcta7bn" path="res://escenas/nivel_1/nivel_1.tscn" id="1_pdctq"]
+
+[node name="EscenaPrincipal" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Nivel1" parent="." instance=ExtResource("1_pdctq")]
