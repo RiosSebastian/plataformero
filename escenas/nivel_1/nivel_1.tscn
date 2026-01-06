@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=4 uid="uid://byljeypcta7bn"]
+[gd_scene load_steps=5 format=4 uid="uid://byljeypcta7bn"]
 
 [ext_resource type="PackedScene" uid="uid://bq0xn42rpj4e3" path="res://escenas/bordes/bordes.tscn" id="1_ahhdk"]
 [ext_resource type="TileSet" uid="uid://cwcv6bv6on5d3" path="res://tile_sets/mazmorra.tres" id="2_wpukg"]
+[ext_resource type="PackedScene" uid="uid://cc4372iqfert4" path="res://escenas/trampa/trampa.tscn" id="3_bfali"]
 [ext_resource type="PackedScene" uid="uid://c6udnv0juw7fv" path="res://escenas/personaje/personaje.tscn" id="3_wpukg"]
 
 [node name="Nivel1" type="Node2D"]
@@ -16,6 +17,10 @@ tile_set = ExtResource("2_wpukg")
 [node name="Nivel" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AADz/wYAAQAuABEAAAD0/wYAAQAvABEAAAD1/wYAAQAuABEAAAD2/wYAAQAvABEAAAD3/wYAAQAuABEAAAD5/wYAAQAuABEAAAD6/wYAAQAvABEAAAACAAYAAQAsAAsAAAADAAYAAQAtAAsAAAAEAAYAAQAuABEAAAAFAAYAAQAvABEAAAAGAAYAAQAuABEAAAAHAAYAAQAvABEAAAAIAAYAAQAuABEAAAAJAAYAAQAvABEAAAAKAAYAAQAuABEAAAALAAYAAQAuABEAAAAMAAYAAQAvABEAAAAKAAMAAQAfAAgAAAALAAMAAQAgAAgAAAAMAAMAAQAhAAgAAAAFAAEAAQAuABEAAAAGAAEAAQAvABEAAAADAAEAAQAuABEAAAAEAAEAAQAvABEAAAABAAEAAQAuABEAAAACAAEAAQAvABEAAAD//wEAAQAuABEAAAAAAAEAAQAvABEAAAD9/wEAAQAuABEAAAD+/wEAAQAvABEAAAD7/wEAAQAuABEAAAD8/wEAAQAvABEAAAD5/wEAAQAuABEAAAD6/wEAAQAvABEAAAD3/wEAAQAuABEAAAD4/wEAAQAvABEAAAD1/wEAAQAuABEAAAD2/wEAAQAvABEAAADz/wEAAQAuABEAAAD0/wEAAQAvABEAAAD3//z/AQAuABEAAAD4//z/AQAvABEAAAD5//z/AQAuABEAAAD6//z/AQAvABEAAAD7//z/AQAuABEAAAD8//z/AQAvABEAAAD9//z/AQAuABEAAAD+//z/AQAvABEAAAD///z/AQAuABEAAAAAAPz/AQAvABEAAAABAPz/AQAuABEAAAACAPz/AQAvABEAAAADAPz/AQAuABEAAAAEAPz/AQAvABEAAAAFAPz/AQAuABEAAAAGAPz/AQAvABEAAAAHAPz/AQAuABEAAAAIAPz/AQAvABEAAAAJAPz/AQAuABEAAAAKAPz/AQAvABEAAAALAPz/AQAuABEAAAAMAPz/AQAvABEAAAD7/wQAAQAsAAkAAAD7/wUAAQAsAAoAAADz////AQAgAAgAAAD0////AQAhAAgAAAD1////AQAiAAgAAAD7/wcAAAAqAAcAAAD9/wcAAAAqAAcAAAD+/wcAAAArAAcAAAD//wcAAAAsAAcAAAD4/wYAAQAuABEAAAD7/wYAAQAsAAsAAAD8/wQAAQAtAAkAAAD8/wUAAQAtAAoAAAD8/wYAAQAtAAsAAAACAAQAAQAsAAkAAAACAAUAAQAsAAoAAAADAAQAAQAtAAkAAAADAAUAAQAtAAoAAAA=")
 tile_set = ExtResource("2_wpukg")
+
+[node name="Trampa" parent="." instance=ExtResource("3_bfali")]
+position = Vector2(-110, -37)
+scale = Vector2(1.1943285, 1.4212415)
 
 [node name="Personaje" parent="." instance=ExtResource("3_wpukg")]
 position = Vector2(-160, 23)

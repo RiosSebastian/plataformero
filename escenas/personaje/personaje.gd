@@ -1,4 +1,7 @@
 extends CharacterBody2D
+
+signal personaje_muerto
+
 @export var Animacion: AnimatedSprite2D
 @export var area_2d: Area2D
 @export var material_personaje_rojo: ShaderMaterial
@@ -8,6 +11,7 @@ var  _velocidad_salto: float = -300.0
 var _muerto: bool
 
 func _ready():
+	add_to_group("personajes")
 	area_2d.body_entered.connect(_on_area_2d_body_entered)
 
 func _physics_process(delta):
@@ -40,11 +44,15 @@ func _physics_process(delta):
 	else :
 		Animacion.play("idle")
 	
-	
-	
 
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(_body: Node2D) -> void:
 	Animacion.material = material_personaje_rojo
 	_muerto = true
 	Animacion.stop()
+	
+	var timer: Timer = Timer.new()
+	add_child(timer)
+	timer.start(0.5)
+	await timer.timeout
+	#o lo podemos escribir como await get_tree().create_time(0.5).timeout
+	personaje_muerto.emit()
